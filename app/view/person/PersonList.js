@@ -32,14 +32,11 @@ Ext.define('ModernApp.view.person.PersonList', {
         },
         columns: [{ 
             text: 'Nome',
-            dataIndex: 'nome'
-        }, {
-            text: 'Cognome',
-            dataIndex: 'cognome'
+            dataIndex: 'nomeCompleto',
+            flex: 1
         }, { 
             text: 'Indirizzo',
-            dataIndex: 'indirizzo',
-            flex: 1
+            dataIndex: 'indirizzo'
         }],
         listeners: {
             childtap: 'onGridClick'

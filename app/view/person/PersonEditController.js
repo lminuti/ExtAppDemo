@@ -28,8 +28,8 @@ Ext.define('ModernApp.view.person.PersonEditController', {
     },
 
     init() {
-        if (this.getView().config.data) {
-            this.record = this.getView().config.data;
+        if (this.getView().getData()) {
+            this.record = this.getView().getData();
         } else {
             this.record = Ext.create('ModernApp.model.Person', {
                 nome: 'fake'

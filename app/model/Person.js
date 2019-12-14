@@ -4,7 +4,17 @@ Ext.define('ModernApp.model.Person', {
     idProperty: 'nome',
 
     fields: [
-        'nome', 'cognome', 'indirizzo'
+        { name: 'nome', type: 'string' },
+        { name: 'cognome', type: 'string' },
+        { name: 'indirizzo', type: 'string' },
+
+        { 
+            name: 'nomeCompleto', 
+            type: 'string', 
+            calculate(data) {
+                return data.cognome + ' ' + data.nome;
+            }        
+        },
     ],
 
     deleteRecord() {

@@ -5,6 +5,10 @@ Ext.define('ModernApp.view.person.PersonEdit', {
     title: 'Person',
     controller: 'personeditcontroller',
 
+    config: {
+        data: null
+    },
+
     tools: [{
         type: 'refresh',
         handler: 'onLoad'
