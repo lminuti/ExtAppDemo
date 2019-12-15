@@ -18,15 +18,14 @@ Ext.define('ModernApp.Application', {
     launch() {
     },
 
-    myTest() {
-        console.log('mytest');
-    },
-
-    showView(xtype) {
+    showView(xtype, params, append) {
         let container = Ext.getCmp('main-container');
-        container.removeAll();
+        if (!append) {
+            container.removeAll();
+        }
         container.add({
-            xtype
+            xtype,
+            params
         });   
         Ext.Viewport.hideAllMenus(); 
     },

@@ -2,22 +2,18 @@ Ext.define('ModernApp.view.person.PersonListController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.personlistcontroller',
 
-    currentRecord: null,
-
     onGridClick(sender, location) {
-        this.currentRecord = location.record;
-        //ModernApp.lib.Util.showDialog('personedit', location.record);
     },
 
     onDeleteClick() {
-        if (this.currentRecord) {
-            this.currentRecord.deleteRecord();
+        if (this.currentRecord()) {
+            this.currentRecord().deleteRecord();
         }
     },
 
     onEditClick(sender, location) {
-        if (this.currentRecord) {
-            ModernApp.lib.Util.showDialog('personedit', this.currentRecord);
+        if (this.currentRecord()) {
+            ModernApp.lib.Util.showDialog('personedit', this.currentRecord());
         }
     },
 
@@ -30,8 +26,12 @@ Ext.define('ModernApp.view.person.PersonListController', {
         console.log(records);
     },
 
+    currentRecord() {
+        return this.grid.getSelection();
+    },
 
     init() {
         this.onLoad();
+        this.grid = this.lookup('grid');
     }
 });

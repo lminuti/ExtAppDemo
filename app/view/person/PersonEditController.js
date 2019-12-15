@@ -24,7 +24,6 @@ Ext.define('ModernApp.view.person.PersonEditController', {
         this.getView().fillRecord();
         await this.record.asyncSave();
         Ext.toast('Record salvato');
-
     },
 
     init() {
