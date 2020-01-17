@@ -6,21 +6,37 @@ Ext.define('ModernApp.view.main.Login', {
     controller: 'logincontroller',
 
     layout: {
-        type:'vbox'
+        type:'center'
     },
 
-    items: [{
-        xtype: 'textfield',
-        label: 'Username',
-        name: 'username'
-    },{
-        xtype: 'passwordfield',
-        label: 'Password',
-        name: 'password'
-    },{
-        xtype: 'button',
-        text: 'Login',
-        handler: 'onLoginClick'
-    }]
+    items: {
+        xtype: 'panel',
+        title: 'Login',
+        shadow: true,
+        padding: 40,
+        layout: {
+            type:'vbox'
+        },
+        defaults: {
+            width: 300
+        },
+        items: [{
+            xtype: 'textfield',
+            label: 'Username',
+            name: 'username'
+        },{
+            xtype: 'passwordfield',
+            label: 'Password',
+            name: 'password'
+        },{
+            xtype: 'button',
+            margin: 20,
+            text: 'Login',
+            handler: 'onLoginClick',
+            ui: 'action'
+        }]
+    
+    }
+
 
 });

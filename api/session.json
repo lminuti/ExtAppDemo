@@ -1,3 +1,21 @@
 {
-    "token": "1232343453563gfhfgh"
+    "token": "1232343453563gfhfgh",
+    "items": [
+    {
+        "text": "Personnel",
+        "iconCls": "x-fa fa-home",
+        "targetXType": "mainlist"
+    },{
+        "text": "Layout test",
+        "iconCls": "x-fa fa-user",
+        "targetXType": "maintoolbar"
+    },{
+        "text": "Person edit",
+        "iconCls": "x-fa fa-users",
+        "targetXType": "personedit"
+    },{
+        "text": "Person list",
+        "iconCls": "x-fa fa-cog",
+        "targetXType": "personlist"
+    }]
 }

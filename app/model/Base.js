@@ -21,7 +21,7 @@ Ext.define('ModernApp.model.Base', {
         namespace: 'ModernApp.model',
         proxy: {
             type: 'ajax',
-            url: '/modernapp/api/{resource}.json',
+            url: 'api/{resource}.json',
             reader: {
                 type: '{reader}'
             },

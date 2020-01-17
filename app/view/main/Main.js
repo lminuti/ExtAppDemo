@@ -15,7 +15,8 @@ Ext.define('ModernApp.view.main.Main', {
         'ModernApp.view.person.PersonEdit'
     ],
 
-    title: 'MyApp',
+    iconCls: 'x-fa fa-user',
+    title: 'ModenAppDemo',
 
     tools: [{
         id: 'main-menu-button',
@@ -28,6 +29,8 @@ Ext.define('ModernApp.view.main.Main', {
     viewModel: 'main',
 
     layout: 'card',
+
+    padding: '10 0 0 0',
 
     items: [{
         xtype: 'app-login'

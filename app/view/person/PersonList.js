@@ -33,6 +33,12 @@ Ext.define('ModernApp.view.person.PersonList', {
         columns: [{ 
             text: 'Nome',
             dataIndex: 'nomeCompleto',
+            cell: {
+                encodeHtml: false
+            },
+            renderer(value) {
+                return `<b>${value}</b>`;
+            },
             flex: 1
         }, { 
             text: 'Indirizzo',
